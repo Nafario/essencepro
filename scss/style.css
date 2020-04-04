@@ -88,12 +88,12 @@ header {
 
 .top-menu .menu-bar .menu-btn-hide {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .top-menu .menu-bar .menu-btn {
   display: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .nav-bar ul {
@@ -104,6 +104,14 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+  -webkit-animation-name: lists;
+          animation-name: lists;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-transition: all linear .3s;
+  transition: all linear .3s;
 }
 
 .nav-bar ul li {
@@ -225,6 +233,16 @@ main .main-btn button:hover {
 
 .mobile-bar {
   display: block;
+  -webkit-animation-name: lists;
+          animation-name: lists;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .mobile-bar ul {
@@ -279,6 +297,24 @@ main .main-btn button:hover {
 
 .mobile-bar ul li a:hover {
   color: #a86500;
+}
+
+@-webkit-keyframes lists {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lists {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes down {

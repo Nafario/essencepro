@@ -60,21 +60,26 @@ header{
         }
         .menu-btn-hide{
             display: inline-block;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         .menu-btn{
             display: none;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         
     }
     
 }
 .nav-bar{
+    
     ul{
         display: flex;
         justify-content: center;
         border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+        animation-name: lists;
+        animation-duration: .2s;
+        animation-timing-function: linear;
+        transition: all linear .3s;
         li{
             padding-bottom: 30px;
             transition: all linear .1s;
@@ -172,12 +177,17 @@ main{
 }
 .mobile-bar{
     display: block;
-    
+    animation-name: lists;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
     ul{
         display: flex;
         flex-direction: column;
         background-color: black;
         align-items: flex-start;
+        
         li{
             padding: 10px 0;
             transition: all linear .1s;
@@ -214,6 +224,18 @@ main{
     }
     
 }
+
+@keyframes lists{
+    0%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
 @keyframes down{
     0%{
         transform: scale(0);
