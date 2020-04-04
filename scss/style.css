@@ -340,6 +340,9 @@ main .main-btn button:hover {
   html {
     font-size: 74%;
   }
+  .top-container {
+    height: 100vh;
+  }
   header {
     width: 90%;
   }
