@@ -1,0 +1,113 @@
+.subject{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    height: 230px;
+    flex-wrap: wrap;
+    a{
+        color: white;
+        
+    }
+    .about{
+        flex-basis: 31%;
+        background: linear-gradient(rgba(0, 0, 0, 0.445),rgba(0, 0, 0, 0.37));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        img{
+           width: 100%;
+           position: absolute;
+           height: 100%;
+           z-index: -1;
+           transition: transform ease-in .2s;
+        }
+        &:hover img{
+           transform: scale(1.1);
+       }
+        a{
+            font-size: 2.6rem;
+        }
+    }
+    .ebook{
+        flex-basis: 31%;
+        background: linear-gradient(rgba(0, 0, 0, 0.445),rgba(0, 0, 0, 0.37));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        img{
+           width: 100%;
+           position: absolute;
+           height: 100%;
+           z-index: -1;
+           transition: transform ease-in .2s;
+        }
+       &:hover img{
+           transform: scale(1.1);
+       }
+        a{
+            font-size: 2.6rem;
+        }
+
+    }
+    .shop{
+        flex-basis: 31%;
+        background: linear-gradient(rgba(0, 0, 0, 0.445),rgba(0, 0, 0, 0.37));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.103);
+        position: relative;
+        overflow: hidden;
+        img{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+            transition: transform ease-in .2s;
+         }
+        &:hover img{
+            transform: scale(1.1);
+        }
+        
+        a{
+            font-size: 2.6rem;
+        }
+    }
+}
+.quote{
+    margin:0 auto 120px auto;
+    text-align: center;
+    max-width: 60%;
+    h1{
+        font-size: 2.7rem;
+        color: rgba(0, 0, 0, 0.699);
+        font-weight: 300;
+    }
+    p{
+        font-size: .8rem;
+        letter-spacing: 1px;
+    }
+}
+@media screen and (max-width: 1160px){
+    .subject{
+        width: 90%;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 520px){
+    .subject{
+        flex-direction: column;
+        height: 600px;
+    }
+    .quote{
+        margin-bottom: 80px;
+    }
+}

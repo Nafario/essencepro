@@ -1,0 +1,123 @@
+article{
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    padding-bottom: 50px;
+    transform: translateY(-7%);
+    .first-card{
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.219);
+        overflow: hidden;
+        padding-bottom: 100px;
+        
+        p{
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+        h2{
+            padding: 30px 0;
+            margin: auto;
+            max-width: 400px;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        a{
+            img{
+                width: 100%;
+                height: 40%;
+                border: none;
+            }
+            h1{
+                padding: 40px 0 20px 0;
+                margin: auto;
+                max-width: 400px;
+                font-size: 2.5rem;
+                color: rgb(41,48,56);
+                font-weight: 400;
+                line-height: 40px;
+                &:hover{
+                    color: rgb(187,129,0);
+                }
+            }
+            color: rgb(187,129,0);
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+            
+            
+            &:first-of-type{
+                border: none;
+                
+            }
+        }
+        max-width: 48%;
+    }
+    .second-card{
+        box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.219);
+        overflow: hidden;
+        padding-bottom: 100px;
+        
+        p{
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+        h2{
+            padding: 30px 0;
+            margin: auto;
+            max-width: 400px;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        a{
+            img{
+                width: 100%;
+                height: 40%;
+                border: none;
+            }
+            h1{
+                padding: 40px 0 20px 0;
+                margin: auto;
+                max-width: 400px;
+                font-size: 2.5rem;
+                color: rgb(41,48,56);
+                font-weight: 400;
+                line-height: 40px;
+                &:hover{
+                    color: rgb(187,129,0);
+                }
+            }
+            color: rgb(187,129,0);
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+            
+            
+            &:first-of-type{
+                border: none;
+                
+            }
+        }
+        max-width: 48%;
+    }
+}
+@media screen and (max-width: 1160px){
+    article{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 900px) {
+    article{
+        
+        transform: translateY(0%);
+        flex-direction: column;
+        align-items: center;
+        .first-card{
+            max-width: 100%;
+            margin: 70px 0;
+        }
+        .second-card{
+            max-width: 100%;
+            margin: 0 0 40px 0;
+        }
+    }
+}

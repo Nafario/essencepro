@@ -1,0 +1,301 @@
+html{
+    font-size: 100%;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+.top-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.452)), url(../imgs/bg.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: white;
+}
+header{
+    width: 70%;
+    margin: 0 auto;
+}
+.top-menu{
+    font-family: 'Acme', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    .search{
+        position: relative;
+        .fa-search{
+            font-size: 1.5rem;
+        }
+        input{
+            font-family: 'Acme', sans-serif;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: white;
+            position: absolute;
+            top: 5%;
+            width: 220px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            &::placeholder{
+                color: white;
+            }
+        }
+    }
+    .logo{
+        a{
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+    
+    .menu-bar{
+        cursor: pointer;
+        .fa-bars{
+            font-size: 1rem;
+            margin-right: 5px;
+            
+        }
+        .menu-btn-hide{
+            display: inline-block;
+            font-size: 1.3rem;
+        }
+        .menu-btn{
+            display: none;
+            font-size: 1.3rem;
+        }
+        
+    }
+    
+}
+.nav-bar{
+    ul{
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+        li{
+            padding-bottom: 30px;
+            transition: all linear .1s;
+            border: 1px solid transparent;
+            position: relative;
+            .drop-item ul{
+                display: none;
+                position: absolute;
+                font-family: 'Baloo Thambi 2', cursive;
+                transform: translateX(10%);
+                margin-top: 30px;
+                li{
+                    padding: 10px 0;
+                    margin: 0 0;
+                    &:hover a{
+                        background-color: rgb(236, 234, 234);
+                        color: rgb(24, 23, 23);
+                    }
+                    a{
+                        padding: 10px 30px;
+                        background-color: black;
+                        line-height: 22px;
+                    }
+                }
+            }
+            &:hover .drop-item{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                }
+            } 
+            
+            &:hover{
+                border-bottom: 1px solid rgb(255, 255, 255);
+            }
+            a{
+                padding: 0px 15px;
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.2rem;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+            
+        }
+    }
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 130px 0;
+    .main-text{
+        h1{
+            font-size: 4.5rem;
+            padding: 25px 0;
+        }
+        p{
+            font-size: 1.5rem;
+            word-wrap: break-word;
+            max-width: 700px;
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    }
+    .main-btn{
+        padding: 20px 0;
+        
+        .info{
+            background-color: rgb(168,101,0);
+            color: white;
+        }
+        button{
+            font-family: 'Baloo Thambi 2', cursive;
+            outline: none;
+            border: none;
+            background: transparent;
+            padding: 15px 30px;
+            background-color: white;
+            font-weight: 700;
+            color: black;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all linear .1s;
+            &:hover{
+                background-color: rgb(49, 48, 48);
+                color: white;
+            }
+        }
+    }
+}
+.mobile-bar{
+    display: block;
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        align-items: flex-start;
+        li{
+            padding: 10px 0;
+            transition: all linear .1s;
+            position: relative;
+            .drop-item ul{
+                display: none;
+                font-family: 'Baloo Thambi 2', cursive;
+                transform-origin: right top;
+                animation-name: down;
+                animation-duration: .3s;
+                li{
+                    padding: 12px 0 0 0;
+                    margin: 0 0;
+                }
+            }
+            &:hover .drop-item{
+                ul{
+                    display: block;
+                }
+            } 
+            a{
+                padding: 0px 15px;
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.2rem;
+                text-align: center;
+                letter-spacing: 1px;
+                &:hover{
+                    color: rgb(168,101,0);
+                }
+            }
+            
+        }
+    }
+    
+}
+@keyframes down{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@media screen and (max-width: 1160px) {
+    html{
+        font-size: 80%;
+    }
+    header{
+        width: 80%;
+        main{
+            margin: 120px 0;
+        }
+    }
+    
+}
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 77%;
+    }
+    header{
+        width: 90%;
+        main{
+            margin: 100px 0;
+        }
+        
+    }
+    .top-menu{
+        .menu-bar{
+            .menu-btn-hide{
+                display: none;
+            }
+            .menu-btn{
+                display: inline-block;
+            }
+        }
+    }
+    
+    .nav-bar{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 520px) {
+    html{
+        font-size: 74%;
+    }
+    header{
+        width: 90%;
+        main{
+            margin: 30px 0;
+        }
+        .search{
+            display: none;
+        }
+    }
+    .main-btn{
+        button{
+            padding: 10px 15px;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    html{
+        font-size: 60%;
+    }
+    .top-container{
+        height: 100vh;
+    }
+    header{
+        width: 90%;
+        main{
+            margin: 0 0;
+        }
+    }
+}
+@import "article";
+@import "section";
+@import "subject";
+@import "endpart";
+@import "res";
