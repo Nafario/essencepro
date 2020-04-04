@@ -317,13 +317,16 @@ main .main-btn button:hover {
 
 @media screen and (max-width: 900px) {
   html {
-    font-size: 77%;
+    font-size: 75%;
   }
   header {
     width: 90%;
   }
   header main {
-    margin: 100px 0;
+    margin: 140px 0;
+  }
+  .top-container {
+    height: 100vh;
   }
   .top-menu .menu-bar .menu-btn-hide {
     display: none;
@@ -357,9 +360,9 @@ main .main-btn button:hover {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 330px) {
   html {
-    font-size: 60%;
+    font-size: 50%;
   }
   .top-container {
     height: 100vh;
@@ -369,6 +372,16 @@ main .main-btn button:hover {
   }
   header main {
     margin: 0 0;
+  }
+  header main h1 {
+    line-height: 40px;
+  }
+  header main p {
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+  header main .main-btn button {
+    padding: 5px 10px;
   }
 }
 
@@ -721,6 +734,9 @@ section .box-third a p {
   }
   .subscribe {
     padding: 50px 30px;
+  }
+  .subscribe .email {
+    width: 80%;
   }
   .box-first {
     margin-bottom: 50px;
